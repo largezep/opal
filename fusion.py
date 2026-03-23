@@ -8,11 +8,11 @@ from moviepy import VideoFileClip, ImageClip, CompositeVideoClip, concatenate_vi
 
 from ken_burns_patch import make_ken_burns_clip, build_looping_background_kb
 # ── CONFIG ──────────────────────────────────────────────
-FOLDER    = r"C:\OPAL"
-CHAT_FILE = r"C:\OPAL\grief.txt"
-OUTPUT = r"C:\OPAL\OPAL_EPISODE.mp4"
-NARRATION = r"C:\OPAL\narration.mp3"
-MODEM_SFX = r"C:\OPAL\modem.mp3"
+FOLDER    = r"E:\OPAL"
+CHAT_FILE = r"E:\OPAL\equilibrium_of_exploitation_converted.txt"
+OUTPUT    = r"E:\OPAL\OPAL_EPISODE.mp4"
+NARRATION = r"E:\OPAL\narration.mp3"
+MODEM_SFX = r"E:\OPAL\modem.mp3"
 W, H      = 1280, 720
 FPS       = 24
 FOOTAGE_TRIM_START = 10.0  # seconds to skip at start of footage

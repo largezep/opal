@@ -8,10 +8,10 @@ import edge_tts
 from moviepy import AudioFileClip
 
 # ── CONFIG ──────────────────────────────────────────────
-CHAT_FILE = r"C:\OPAL\grief.txt"
-AUDIO_OUT  = r"C:\OPAL\narration.mp3"
-TIMING_OUT = r"C:\OPAL\timing.json"
-FUSION     = r"C:\OPAL\fusion.py"
+CHAT_FILE = r"E:\OPAL\equilibrium_of_exploitation_converted.txt"
+AUDIO_OUT  = r"E:\OPAL\narration.mp3"
+TIMING_OUT = r"E:\OPAL\timing.json"
+FUSION     = r"E:\OPAL\fusion.py"
 
 RAY_VOICE  = "en-US-GuyNeural"
 AI_VOICE   = "en-GB-SoniaNeural"
