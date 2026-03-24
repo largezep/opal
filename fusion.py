@@ -9,7 +9,7 @@ from moviepy import VideoFileClip, ImageClip, CompositeVideoClip, concatenate_vi
 from ken_burns_patch import make_ken_burns_clip, build_looping_background_kb
 # ── CONFIG ──────────────────────────────────────────────
 FOLDER    = r"E:\OPAL"
-CHAT_FILE = r"E:\OPAL\equilibrium_of_exploitation_converted.txt"
+CHAT_FILE = r"E:\OPAL\The Same Sentence.txt"
 OUTPUT    = r"E:\OPAL\OPAL_EPISODE.mp4"
 NARRATION = r"E:\OPAL\narration.mp3"
 MODEM_SFX = r"E:\OPAL\modem.mp3"
@@ -380,9 +380,9 @@ def fuse():
                 seen.add(n)
                 imgs.append(f)
 
-    vids = sorted([f for f in glob.glob(os.path.join(FOLDER, "*.mp4"))
-                   if "OPAL_" not in os.path.basename(f).upper()])[:MAX_CLIPS]
-
+    vids = sorted([f for f in glob.glob(os.path.join(FOLDER, "*.mp4")) + 
+               glob.glob(os.path.join(FOLDER, "*.webm"))
+               if "OPAL_" not in os.path.basename(f).upper()])[:MAX_CLIPS]
     print(f"  Footage: {len(vids)} videos (capped at {MAX_CLIPS}), {len(imgs)} images")
 
     if not vids and not imgs:
