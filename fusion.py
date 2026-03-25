@@ -9,7 +9,7 @@ from moviepy import VideoFileClip, ImageClip, CompositeVideoClip, concatenate_vi
 from ken_burns_patch import make_ken_burns_clip, build_looping_background_kb
 # ── CONFIG ──────────────────────────────────────────────
 FOLDER    = r"E:\OPAL"
-CHAT_FILE = r"E:\OPAL\The Same Sentence.txt"
+CHAT_FILE = r"E:\OPAL\temporarily_maintaining_the_conversation.txt"
 OUTPUT    = r"E:\OPAL\OPAL_EPISODE.mp4"
 NARRATION = r"E:\OPAL\narration.mp3"
 MODEM_SFX = r"E:\OPAL\modem.mp3"
@@ -63,8 +63,8 @@ def wrap_lines(text, width):
       font          — the font used
       turn_line_idx — list of line indices where each turn starts (one per RAY:/AI: block)
     """
-    font = get_font(16)
-    chars = max(1, (width - 40) // 10)
+    font = get_font(22)
+    chars = max(1, (width - 40) // 13)
     RAY_COLOR = (100, 160, 255)
     AI_COLOR  = (0, 255, 70)
     lines = []
@@ -97,7 +97,7 @@ def wrap_lines(text, width):
     return lines, font, turn_line_idx
 
 def sidebar_frame(lines, font, w, h, scroll_px):
-    lh = 22
+    lh = 28
     img = Image.new("RGBA", (w, h), (0, 0, 0, 180))
     draw = ImageDraw.Draw(img)
     # Only draw lines that are actually on screen
@@ -146,7 +146,7 @@ def build_looping_background(vids, imgs, dur):
 
 # ── SCROLL ANCHOR BUILDER ────────────────────────────────
 
-def build_scroll_anchors(timing_turns, turn_line_idx, total_lines, lh=22):
+def build_scroll_anchors(timing_turns, turn_line_idx, total_lines, lh=28):
     """
     Build a list of (time, scroll_px) anchor points — one per turn,
     plus a final anchor at the end of the last turn so scroll
@@ -403,7 +403,7 @@ def fuse():
     sw = W // 3
     lines, font, turn_line_idx = wrap_lines(txt, sw)
 
-    lh = 22
+    lh = 28
     total_content = len(lines) * lh
     print(f"  Scroll: {len(lines)} lines, {total_content}px content")
 
